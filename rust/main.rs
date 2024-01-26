@@ -6,6 +6,8 @@ fn main(){
     let myresult:String=helper::namehelpers::get_full_name("Ayush","SINGH");
     println!("Hello from {0}",myresult);
 
+    let new_age=helper::privatefns::get_age_plue_5(23);
+    println!("new age is {}",new_age);
 }
 
 

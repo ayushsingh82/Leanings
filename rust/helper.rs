@@ -5,3 +5,14 @@ pub fn get_full_name(first:&str,last:&str)->String{
 }
 }
 
+pub mod database{
+
+}
+
+pub mod privatefns{
+    pub fn get_age_plue_5(age:u16)->u16{
+        return age+5;
+    }
+}
+
+
