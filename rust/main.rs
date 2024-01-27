@@ -1,16 +1,94 @@
 pub mod helper;
 
 fn main(){
-    println!("hello");
-    // test_func();
-    let myresult:String=helper::namehelpers::get_full_name("Ayush","SINGH");
-    println!("Hello from {0}",myresult);
+    // println!("hello");
 
-    let new_age=helper::privatefns::get_age_plue_5(23);
-    println!("new age is {}",new_age);
+    // test_func();
+
+    // let myresult:String=helper::namehelpers::get_full_name("Ayush","SINGH");
+    // println!("Hello from {0}",myresult);
+
+    // let new_age=helper::privatefns::get_age_plue_5(23);
+    // println!("new age is {}",new_age);
+
+    // test_if();
+
+    // test_while();
+
+    // test_loop();
+
+    test_for()
 }
 
 
+fn test_if(){
+    let age_to_drive=16u8;
+
+    println!("Enter the age :");
+    let myinput=&mut String::from("");
+    std::io::stdin().read_line(myinput).unwrap();
+    //unwrap() is used to remove the worning of not using the fn coming back from read_line
+
+    let age=myinput.replace("\n","").parse::<u8>().unwrap();
+    if age > age_to_drive{
+        print!("Issuing licese");
+    }
+    else if age==16 {
+         println!("Wait one more year");
+    }else{
+        println!("Age less thn 16");
+    }
+
+
+    //short form is in below line
+    let drivers_license:bool= if age>=16 {true} else {false};
+    
+}
+
+
+fn test_loop(){
+    let mut x=1;
+    loop{
+        println!("Hello from rust");
+
+        if x>5 {
+            break;
+        }
+        x+=1;
+    }
+}
+
+fn test_for(){
+    let ages:[i32;4]=[14,67,89,97];
+    let age_to_drive=16i32;
+
+    for value in ages {
+        // println!("The current age is {0}",value );
+
+        if value>= age_to_drive{
+            println!("you can drive {0}",value);
+        }else{
+            println!("wait a little {0}",value);
+        }
+    }
+}
+
+#[allow(dead_code)]
+fn test_while(){
+  let age_to_drive=16u8;
+
+  let mut current_age=0u8;
+   
+   while current_age < age_to_drive{
+    println!("Waiting...");
+    current_age+=1;
+
+    if current_age==6{
+        break;
+    }
+   }
+
+}
 
 #[allow(dead_code)]
 fn test_func(){
