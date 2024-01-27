@@ -1,4 +1,7 @@
+use closures::test_closures;
+
 pub mod helper;
+pub mod closures;
 
 fn main(){
     // println!("hello");
@@ -17,7 +20,9 @@ fn main(){
 
     // test_loop();
 
-    test_for()
+    // test_for()
+
+    test_closures()
 }
 
 
