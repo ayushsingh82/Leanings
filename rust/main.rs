@@ -2,6 +2,7 @@ use closures::test_closures;
 
 pub mod helper;
 pub mod closures;
+pub mod matchtest;
 
 fn main(){
     // println!("hello");
@@ -22,7 +23,9 @@ fn main(){
 
     // test_for()
 
-    test_closures()
+    // test_closures();
+
+    matchtest::test_match_int();
 }
 
 
