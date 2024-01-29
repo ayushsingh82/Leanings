@@ -25,7 +25,9 @@ fn main(){
 
     // test_closures();
 
-    matchtest::test_match_int();
+    // matchtest::test_match_int();
+    matchtest::test_match_string();
+    matchtest::test_match_array();
 }
 
 

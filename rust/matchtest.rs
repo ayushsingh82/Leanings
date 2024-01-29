@@ -1,3 +1,24 @@
+pub fn test_match_string()->u32 {
+        let car_manufacture:&str="Porche";
+
+        match car_manufacture{
+            "Hyundai"=>30000,
+            "Posrche"=>90000,
+            _ => 0
+        }
+}
+
+ pub fn test_match_array(){
+    let prices:[u32;4]=[3000,5000,9000,12000];
+
+    match prices[0..=1]{
+        [3000,5000]=>println!("You have some reasonably priced cars"),
+        [3000,5000,..]=>println!("you have variety"),
+        _=>println!("You don't have any priced car")
+    }
+ }
+
+
 pub fn test_match_int(){
 
     // let myage:u16=35;
