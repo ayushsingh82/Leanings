@@ -4,6 +4,8 @@ pub mod helper;
 pub mod closures;
 pub mod matchtest;
 pub mod optiontest;
+pub mod mystruct;
+
 
 fn main(){
     // println!("hello");
@@ -30,23 +32,29 @@ fn main(){
     // matchtest::test_match_string();
     // matchtest::test_match_array();
 
+
     
-    let result:Option<u8>=optiontest::test_option_types();
-    println!("{0}",result.unwrap());
+    // let result:Option<u8>=optiontest::test_option_types();
+    // println!("{0}",result.unwrap());
 
-      let strresult: Option<String>=optiontest::test_option_string();
-      println!("Name is {}",strresult.unwrap());
+    //   let strresult: Option<String>=optiontest::test_option_string();
+    //   println!("Name is {}",strresult.unwrap());
 
-      let charresult: Option<optiontest::CharacterType>=optiontest::test_option_chartype();
+    //   let charresult: Option<optiontest::CharacterType>=optiontest::test_option_chartype();
 
-      if charresult.is_some(){
-        println!("User has selected a chartype");
-      }else{
-        println!("Chartype is null");
-      }
+    //   if charresult.is_some(){
+    //     println!("User has selected a chartype");
+    //   }else{
+    //     println!("Chartype is null");
+    //   }
 
 
-      println!("character type is{}",charresult.unwrap().to_string());
+    //   println!("character type is{}",charresult.unwrap().to_string());
+
+    let myperson=mystruct::new_person();
+    println!("Fist name:{0} , last name:{1},birth month :{2},
+    birth_year:{3}",myperson.first_name,myperson.last_name,myperson.birth_month,myperson.birth_year);
+
 
      
 }
