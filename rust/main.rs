@@ -1,4 +1,5 @@
 use closures::test_closures;
+use crate::mystruct::{test_create_person,create_vehicle,create_vehicleTuple};
 
 pub mod helper;
 pub mod closures;
@@ -50,10 +51,11 @@ fn main(){
 
 
     //   println!("character type is{}",charresult.unwrap().to_string());
+// mystruct::test_create_person();
 
-    let myperson=mystruct::new_person();
-    println!("Fist name:{0} , last name:{1},birth month :{2},
-    birth_year:{3}",myperson.first_name,myperson.last_name,myperson.birth_month,myperson.birth_year);
+test_create_person();
+create_vehicle();
+create_vehicleTuple();
 
 
      
