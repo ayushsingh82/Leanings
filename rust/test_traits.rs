@@ -1,24 +1,50 @@
-struct Person<PetType:Animal>{
+struct Person<PetType,PetType2:Animal > where PetType:Animal + NotDangerous{
     first_name:String,
     pet:PetType,
+    pet2:PetType2,
 }
 
-trait  Animal {}
+trait  Animal {
+    fn make_sound(&self)->();
+}
+
+trait NotDangerous{}
+trait Dangerous{}
 
 struct Dog{}
-impl Animal for Dog{ }
+impl NotDangerous for Dog{}
+impl Animal for Dog{ 
+    fn make_sound(&self)->() {
+        println!("Dog barked");
+    }
+}
 
-#[allow(dead_code)]
+
 struct Cat{}
-impl Animal for Cat{}
+impl NotDangerous for Cat{}
+impl Animal for Cat{
+    fn make_sound(&self)->() {
+        println!("cat meowed");
+    }
+}
 
-#[allow(dead_code)]
+
 struct Bear{}
-impl Animal for Bear{}
+impl Dangerous for Bear{}
+impl Animal for Bear{
+    fn make_sound(&self)->() {
+        println!("bear roared");
+    }
+}
 
-#[allow(dead_code)]
+
 struct Tiger{}
-impl Animal for Tiger{}
+impl Dangerous for Tiger{}
+impl Animal for Tiger{
+    fn make_sound(&self)->() {
+        println!("tiger roared");
+    }
+}
 
 
 
@@ -32,5 +58,6 @@ pub fn create_person(){
     let pet2=Cat{};
     let pet3=Bear{};
     let pet4=Tiger{};
-   let p1:Person<Cat>=Person{first_name:"Ayush".to_string(),pet:pet2};
+   let p1:Person<Cat,Bear>=Person{first_name:"Ayush".to_string(),pet:pet2,pet2:pet3};
+   p1.pet.make_sound();
 }
