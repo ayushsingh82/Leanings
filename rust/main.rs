@@ -6,7 +6,7 @@ pub mod closures;
 pub mod matchtest;
 pub mod optiontest;
 pub mod mystruct;
-
+pub mod test_traits;
 
 fn main(){
     // println!("hello");
@@ -53,9 +53,12 @@ fn main(){
     //   println!("character type is{}",charresult.unwrap().to_string());
 // mystruct::test_create_person();
 
-test_create_person();
-create_vehicle();
-create_vehicleTuple();
+
+// test_create_person();
+// create_vehicle();
+// create_vehicleTuple();
+
+test_traits::create_person();
 
 
      
