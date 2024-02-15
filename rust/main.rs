@@ -7,6 +7,7 @@ pub mod matchtest;
 pub mod optiontest;
 pub mod mystruct;
 pub mod test_traits;
+pub mod myvec;
 
 fn main(){
     // println!("hello");
@@ -58,9 +59,9 @@ fn main(){
 // create_vehicle();
 // create_vehicleTuple();
 
-test_traits::create_person();
+// test_traits::create_person();
 
-
+myvec::test_vec_int();
      
 }
 
