@@ -20,3 +20,31 @@ pub fn test_vec_int(){
 
     println!("element at index 10 is {:?}",my_ints.get(10));
 }
+
+pub fn test_vec_string(){
+    let first_names:Vec<&str>=vec!["Trevour","Nancy","Shanon","Billy"];
+
+    for first_name in first_names.clone() {
+        println!("Processing {}...",first_name);
+    }
+
+    println!("{:?}",first_names);
+}
+
+#[derive(Debug)]
+struct Car{
+    manufacturer:String,
+    model:String
+}
+
+pub fn test_vec_car(){
+    let mut car_list:Vec<Car>=vec![];
+
+   for _ in 1..10u8{
+    car_list.push(Car{manufacturer:"Porshe".to_string(),model:"Cyane".to_string()});
+   }
+
+    println!("{:?}",car_list);
+    println!("{:?}",car_list.len());
+    println!("{:?}",car_list.capacity());
+}
