@@ -40,11 +40,31 @@ struct Car{
 pub fn test_vec_car(){
     let mut car_list:Vec<Car>=vec![];
 
+    let mut car_lot2:Vec<Car>=vec![];
+
    for _ in 1..10u8{
     car_list.push(Car{manufacturer:"Porshe".to_string(),model:"Cyane".to_string()});
    }
 
+   for _ in 1..10u8{
+    car_lot2.push(Car{manufacturer:"Hyundai".to_string(),model:"Sonata".to_string()});
+   }
+
+   car_list.append(&mut car_lot2);
+
+   car_list.insert(0,Car{manufacturer:"Lambo".to_string(),model:"Urus".to_string()});
+
+   car_list.remove(0);
+
+//    let keep=|e:&Car| {if e.manufacturer=="Porsche" {return true;} else {return  false;}};
+//    car_list.retain(keep);
+
+car_list.reserve(500);
+
     println!("{:?}",car_list);
     println!("{:?}",car_list.len());
-    println!("{:?}",car_list.capacity());
+    println!("{:?}",car_lot2.len());
+
+     println!("{:?}",car_list.get(0).unwrap()); 
+
 }
