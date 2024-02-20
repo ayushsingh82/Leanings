@@ -9,6 +9,7 @@ pub mod mystruct;
 pub mod test_traits;
 pub mod myvec;
 pub mod myhashmap;
+pub mod myhashset;
 
 fn main(){
     // println!("hello");
@@ -67,7 +68,8 @@ fn main(){
 // myvec::test_vec_string();
 // myvec::test_vec_car();
 
-myhashmap::test_hashmap_basic();
+// myhashmap::test_hashmap_basic();
+myhashset::test_hashset_type();
      
 }
 
