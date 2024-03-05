@@ -1,3 +1,6 @@
+// extern crate chrono;
+use chrono::{Utc, Duration as ChronoDuration};
+
 use std::{ops::Sub, time::{Duration,Instant}};
 
 pub fn test_stdtime(){
@@ -18,4 +21,12 @@ pub fn test_stdtime(){
 
      println!("Elapsed time is {}",now.elapsed().as_micros());
  
+}
+
+pub fn test_chrono(){
+      let utc_now=chrono::Utc::now();
+      println!("{}",utc_now.format("%Z %Y %b %d %H"));
+
+    let local_time=chrono::Local::now();
+    println!("{}",local_time.format("%Z %Y %b %d %H"));
 }

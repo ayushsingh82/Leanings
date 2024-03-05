@@ -76,6 +76,7 @@ fn main(){
 // myiters::test_rust_iterators();
 
 mydatetime::test_stdtime();
+mydatetime::test_chrono();
      
     
 }
