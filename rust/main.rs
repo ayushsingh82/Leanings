@@ -13,6 +13,7 @@ pub mod myhashset;
 pub mod myiters;
 pub mod mydatetime;
 pub mod mythreads;
+pub mod myscopedthreads;
 
 fn main(){
     // println!("hello");
@@ -80,7 +81,9 @@ fn main(){
 // mydatetime::test_chrono();
      
     //  mythreads::test_threads();    
-    mythreads::spawn_thread();
+    // mythreads::spawn_thread();
+
+    myscopedthreads::test_thread_variables();
 }
 
 
